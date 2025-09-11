@@ -20,6 +20,7 @@ def main():
                 return
 
         screen.fill("black")
+        player.update(dt)
         # draws the player on display and re-renders every iteration
         player.draw(screen)
         # updates the display every iteration
