@@ -1,6 +1,8 @@
 # this allows us to use code from
 # the open-source pygame library
 # throughout this file
+import sys
+
 import pygame
 
 from asteroid import Asteroid
@@ -38,6 +40,12 @@ def main():
 
         # updates the display every iteration
         pygame.display.flip()
+
+        # checking for collisions
+        for asteroid in asteroids:
+            result = asteroid.collision_check(player)
+            if result is True:
+                sys.exit("Game Over!")
 
         # limits fps to 60
         dt = clock.tick(60) / 1000
