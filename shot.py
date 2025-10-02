@@ -13,8 +13,3 @@ class Shot(CircleShape):
 
     def update(self, dt):
         self.position += self.velocity * dt
-
-    def shoot(self, player):
-    # TODO: Finish Shoot Method
-
-
